@@ -1,0 +1,17 @@
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_11.xml
+.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_11.xml
+.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml
+.idea/libraries/Maven__joda_time_joda_time_2_2.xml
+.idea/libraries/Maven__junit_junit_4_11.xml
+.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
