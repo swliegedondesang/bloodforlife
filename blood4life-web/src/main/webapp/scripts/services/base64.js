@@ -1,7 +1,7 @@
 //Define a function scope, variables used inside it will NOT be globally visible.
 (function () {
 
-angular.module('togeez').service('base64', function () {
+angular.module('blood4life').service('base64', function () {
     var keyStr = "ABCDEFGHIJKLMNOP" +
         "QRSTUVWXYZabcdef" +
         "ghijklmnopqrstuv" +

@@ -9,16 +9,16 @@
     <logger name="org.springframework" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="org.springframework.data" level="DEBUG">
+    <!--<logger name="org.springframework.data" level="DEBUG">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.security" level="DEBUG">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+    <logger name="org.springframework.web" level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="org.springframework.security" level="DEBUG">
-        <appender-ref ref="STDOUT"/>
-    </logger>
-    <logger name="org.springframework.web" level="ERROR">
-        <appender-ref ref="STDOUT"/>
-    </logger>
-    <logger name="com.togeez" level="DEBUG">
+    <logger name="be.dondesang.swliege" level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </logger>
 

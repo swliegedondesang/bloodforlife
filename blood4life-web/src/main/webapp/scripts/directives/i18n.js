@@ -1,8 +1,8 @@
 (function () {
 
-    var togeez = angular.module('togeez');
+    var blood4life = angular.module('blood4life');
 
-    togeez.directive('msg', function () {
+    blood4life.directive('msg', function () {
         return {
             restrict: 'EA',
             link: function (scope, element, attrs) {

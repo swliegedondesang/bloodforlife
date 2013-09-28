@@ -1,8 +1,8 @@
 (function () {
 
-    var togeez = angular.module('togeez');
+    var blood4life = angular.module('blood4life');
 
-    togeez.service('i18n', function () {
+    blood4life.service('i18n', function () {
         var self = this;
         this.setLanguage = function (language) {
             $.i18n.properties({
@@ -18,6 +18,6 @@
 
         //TODO: check the browser language
 
-        this.setLanguage('en');
+        this.setLanguage('fr');
     });
 }());
