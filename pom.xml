@@ -8,6 +8,7 @@
     <artifactId>blood4life</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
+        <module>blood4life-web</module>
     </modules>
     <packaging>pom</packaging>
 
