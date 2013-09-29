@@ -17,7 +17,7 @@
         <constructor-arg ref="signInAdapter"/>
     </bean>
 
-    <bean id="signInAdapter" class="be.dondesang.swliege.social.SimpleSignInAdapter"/>
+    <bean id="signInAdapter" class="be.dondesang.swliege.web.social.SimpleSignInAdapter"/>
 
     <bean id="connectionFactoryLocator"
           class="org.springframework.social.connect.support.ConnectionFactoryRegistry">

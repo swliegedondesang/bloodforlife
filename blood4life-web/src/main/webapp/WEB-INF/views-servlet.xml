@@ -22,7 +22,7 @@
     </bean>
 
     <bean class="org.springframework.social.connect.web.ProviderSignInController">
-        <property name="applicationUrl" value="http://localhost:8080/signin" />
+        <!--<property name="applicationUrl" value="/" />-->
         <property name="signUpUrl" value="/register" />
         <property name="signInUrl" value="/login" />
     </bean>
