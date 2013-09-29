@@ -21,6 +21,8 @@
         </property>
     </bean>
 
+    <bean id="connectionSignUp" class="be.dondesang.swliege.web.social.ConnectionSignUpImpl"/>
+
     <bean id="connectionRepository" factory-method="createConnectionRepository"
           factory-bean="usersConnectionRepository" scope="request">
         <constructor-arg value="#{request.userPrincipal.name}"/>
@@ -32,6 +34,7 @@
         <constructor-arg ref="dataSource"/>
         <constructor-arg ref="connectionFactoryLocator"/>
         <constructor-arg ref="textEncryptor"/>
+        <property name="connectionSignUp" ref="connectionSignUp"/>
     </bean>
 
     <jee:jndi-lookup id="dataSource" jndi-name="jdbc/blood4life-social"/>

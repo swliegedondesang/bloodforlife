@@ -21,7 +21,7 @@
     <logger name="org.springframework.social" level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="be.dondesang.swliege" level="INFO">
+    <logger name="be.dondesang.swliege" level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </logger>
 

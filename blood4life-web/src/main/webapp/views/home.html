@@ -1,17 +1,50 @@
 <div class="container">
 
     <div class="row span10 well">
-        <h2>Spread the word !</h2>
+        <h2>Help spreading the <span class="bloody">bloody</span> click!</h2>
 
-        <!--<a href="/login">-->
+        <!--<form id="fb_signin" action="/signin/facebook" method="POST">-->
+        <!--<button type="submit">-->
+        <!--Signin-->
         <!--<img src="/img/fb_share.png"/>-->
-        <!--</a>-->
+        <!--</button>-->
+        <!--</form>-->
 
-        <form id="fb_signin" action="/signin/facebook" method="POST">
-            <button type="submit">
-                <img src="/img/fb_share.png"/>
-            </button>
-        </form>
+        <!--<form id="fb_connect" action="/connect/facebook" method="POST">-->
+        <!--<button type="submit">-->
+        <!--Connect-->
+        <!--<img src="/img/fb_share.png"/>-->
+        <!--</button>-->
+        <!--</form>-->
+        <br />
+        <div class="container-fluid">
+            <div class="row-fluid text-center">
+                <a href="javascript:void(0);"
+                   onclick="
+            window.open(
+              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://www.facebook.com/pages/Blood4life/202422016602519?fref=ts')+'& message=Facebook%20Dialogs%20are%20so%20easy!',
+              'facebook-share-dialog',
+              'width=626,height=436');
+            return false;">
+                    <img src="/img/fb_share.png"/>
+                </a>
+
+                <h1>OR</h1>
+
+                <a href="https://twitter.com/Blood4lifeBE" class="twitter-follow-button" data-show-count="false">Follow
+                    us
+                    @Blood4lifeBE</a>
+                <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
 
     </div>
     <div class="row span10 well">
