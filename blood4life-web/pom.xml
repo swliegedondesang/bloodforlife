@@ -34,6 +34,10 @@
         <!--    SPRING SOCIAL   -->
         <dependency>
             <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-web</artifactId>
         </dependency>
         <dependency>
@@ -105,6 +109,13 @@
                     <port>8080</port>
                     <path>/</path>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>9.1-901.jdbc4</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

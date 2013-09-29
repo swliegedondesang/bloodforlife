@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="DEBUG" additivity="false">
+    <logger name="org.springframework" level="INFO" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
     <!--<logger name="org.springframework.data" level="DEBUG">-->
@@ -15,10 +15,10 @@
     <!--<logger name="org.springframework.security" level="DEBUG">-->
         <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
-    <logger name="org.springframework.web" level="DEBUG">
+    <logger name="org.springframework.web" level="INFO">
         <appender-ref ref="STDOUT"/>
     </logger>
-    <logger name="be.dondesang.swliege" level="DEBUG">
+    <logger name="be.dondesang.swliege" level="INFO">
         <appender-ref ref="STDOUT"/>
     </logger>
 

@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+	   http://www.springframework.org/schema/aop
+	   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	   http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.1.xsd
+       http://www.springframework.org/schema/jee
+       http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+
+    <bean class="org.springframework.social.connect.web.ProviderSignInController">
+        <constructor-arg ref="signInAdapter"/>
+    </bean>
+
+    <bean id="signInAdapter" class="be.dondesang.swliege.social.SimpleSignInAdapter"/>
+
+    <bean id="connectionFactoryLocator"
+          class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+        <property name="connectionFactories">
+            <list>
+                <bean class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+                    <constructor-arg value="348588725285313"/>
+                    <constructor-arg value="428327a9d17538228a3586e9d915b5ee"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="connectionRepository" factory-method="createConnectionRepository"
+          factory-bean="usersConnectionRepository" scope="request">
+        <constructor-arg value="#{request.userPrincipal.name}"/>
+        <aop:scoped-proxy proxy-target-class="false"/>
+    </bean>
+
+    <bean id="usersConnectionRepository"
+          class="org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository">
+        <constructor-arg ref="dataSource"/>
+        <constructor-arg ref="connectionFactoryLocator"/>
+        <constructor-arg ref="textEncryptor"/>
+    </bean>
+
+    <bean id="textEncryptor" class="org.springframework.security.crypto.encrypt.Encryptors"
+          factory-method="noOpText"/>
+
+    <jee:jndi-lookup id="dataSource" jndi-name="jdbc/DefaultDB"/>
+
+</beans>
