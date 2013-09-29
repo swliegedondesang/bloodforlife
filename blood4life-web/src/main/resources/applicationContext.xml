@@ -10,7 +10,7 @@
     <!--<context:property-placeholder location="classpath:/be/dondesang/swliege/config/environment.properties"/>-->
 
     <!--<import resource="data-ctx.xml"/>-->
-    <!--<import resource="security-ctx.xml"/>-->
+    <import resource="security-ctx.xml"/>
     <!--<import resource="social-ctx.xml"/>-->
 
     <context:component-scan base-package="be.dondesang.swliege">
