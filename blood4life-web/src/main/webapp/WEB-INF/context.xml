@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/blood4life-web" docBase="myApp">
 
-    <Resource name="jdbc/DefaultDB" auth="Container" type="javax.sql.DataSource"
+    <Resource name="jdbc/blood4life-social" auth="Container" type="javax.sql.DataSource"
               username="postgres"
               password="postgres"
               driverClassName="org.postgresql.Driver"

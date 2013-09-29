@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:sec="http://www.springframework.org/schema/security"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
-       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
     <context:component-scan base-package="be.dondesang.swliege.web.controller.view"/>
 
@@ -18,16 +16,14 @@
     <mvc:view-controller path="/" view-name="index.html"/>
 
     <bean class="org.springframework.social.connect.web.ConnectController">
-        <property name="applicationUrl" value="http://localhost:8080" />
+        <property name="applicationUrl" value="http://localhost:8080"/>
     </bean>
 
-    <bean class="org.springframework.social.connect.web.ProviderSignInController">
-        <constructor-arg ref="signInAdapter"/>
+    <!--<bean id="signInAdapter" class="be.dondesang.swliege.web.social.SimpleSignInAdapter"/>-->
 
-        <property name="applicationUrl" value="http://localhost:8080" />
-        <property name="signUpUrl" value="/signup" />
-        <property name="signInUrl" value="/signin" />
-    </bean>
+    <!--<bean class="org.springframework.social.connect.web.ProviderSignInController">-->
+    <!--<property name="applicationUrl" value="http://localhost:8080"/>-->
+    <!--</bean>-->
 
     <!--<sec:global-method-security pre-post-annotations="enabled"/>-->
 
