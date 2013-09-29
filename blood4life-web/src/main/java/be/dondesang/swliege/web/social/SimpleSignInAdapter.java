@@ -1,4 +1,4 @@
-package be.dondesang.swliege.social;
+package be.dondesang.swliege.web.social;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

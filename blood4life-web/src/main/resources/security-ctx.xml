@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:oauth2="http://www.springframework.org/schema/security/oauth2"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd
+           http://www.springframework.org/schema/security/oauth2
+           http://www.springframework.org/schema/security/spring-security-oauth2.xsd">
+
+    <http use-expressions="true" disable-url-rewriting="true">
+        <intercept-url pattern="/" access="permitAll()"/>
+        <intercept-url pattern="/index.html" access="permitAll()"/>
+        <intercept-url pattern="/login/**" access="permitAll()"/>
+        <intercept-url pattern="/signin/**" access="permitAll()"/>
+        <intercept-url pattern="/img/**" access="permitAll()"/>
+        <intercept-url pattern="/scripts/**" access="permitAll()"/>
+        <intercept-url pattern="/styles/**" access="permitAll()"/>
+        <intercept-url pattern="/views/**" access="permitAll()"/>
+        <intercept-url pattern="/rest/**" access="isFullyAuthenticated()"/>
+        <intercept-url pattern="/connect/**" access="permitAll()" />
+        <intercept-url pattern="/**" access="isFullyAuthenticated()"/>
+        <form-login login-page="/index.html" authentication-failure-url="/index.html?failure=true"
+                    default-target-url="/"/>
+        <logout invalidate-session="true" logout-success-url="/index.html"/>
+    </http>
+
+
+    <beans:bean id="userDetailsService" class="be.dondesang.swliege.web.security.UserDetailServiceImpl"/>
+
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailsService"/>
+    </authentication-manager>
+
+
+    <!--<global-method-security pre-post-annotations="enabled" proxy-target-class="true">-->
+    <!---->
+    <!--</global-method-security>-->
+</beans:beans>

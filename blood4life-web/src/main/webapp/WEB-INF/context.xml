@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/blood4life-web" docBase="myApp">
 
-<Resource name="jdbc/DefaultDB" auth="Container" type="javax.sql.DataSource"
-          username="postgres"
-          password="admin"
-          driverClassName="org.postgresql.Driver"
-          url="jdbc:postgresql://localhost:5432/defaultdb"
-          maxActive="20"
-          maxIdle="10"
-          validationQuery="select 1" />
+    <Resource name="jdbc/DefaultDB" auth="Container" type="javax.sql.DataSource"
+              username="postgres"
+              password="postgres"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/blood4life_social"
+              maxActive="20"
+              maxIdle="10"
+              validationQuery="select 1"/>
 </Context>
