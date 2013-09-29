@@ -18,13 +18,15 @@
     <mvc:view-controller path="/" view-name="index.html"/>
 
     <bean class="org.springframework.social.connect.web.ConnectController">
-        <property name="applicationUrl" value="http://localhost:8080/index.html/" />
+        <property name="applicationUrl" value="http://localhost:8080/index.html" />
     </bean>
 
     <bean class="org.springframework.social.connect.web.ProviderSignInController">
-        <property name="applicationUrl" value="http://localhost:8080/signin" />
-        <property name="signUpUrl" value="/register" />
-        <property name="signInUrl" value="/login" />
+        <constructor-arg ref="signInAdapter"/>
+
+        <property name="applicationUrl" value="http://localhost:8080/index.html" />
+        <property name="signUpUrl" value="/signup" />
+        <property name="signInUrl" value="/signin" />
     </bean>
 
     <!--<sec:global-method-security pre-post-annotations="enabled"/>-->

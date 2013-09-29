@@ -13,10 +13,6 @@
        http://www.springframework.org/schema/jee
        http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
 
-    <bean class="org.springframework.social.connect.web.ProviderSignInController">
-        <constructor-arg ref="signInAdapter"/>
-    </bean>
-
     <bean id="signInAdapter" class="be.dondesang.swliege.social.SimpleSignInAdapter"/>
 
     <bean id="connectionFactoryLocator"
